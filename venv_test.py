@@ -19,7 +19,7 @@ try:
     print("Database version : {}".format(data))
     conn.close()
 except:
-    print('DB connection failed!')
+    print("Couldn't connect to DB")
 
 print("\n\n")
 
