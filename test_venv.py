@@ -41,8 +41,8 @@ print("\n\n")
 
 
 #-------------------------------------------------
-# NumPy, SciPy, and Matplotlib
-print("Exercising NumPy, SciPy, and Matplotlib...")
+# NumPy and SciPy
+print("Exercising NumPy and SciPy")
 
 import numpy as np
 from scipy import special, optimize
@@ -52,11 +52,21 @@ f = lambda x: -special.jv(3, x)
 sol = optimize.minimize(f, 1.0)
 x = np.linspace(0, 10, 5000)
 print(x)
+
+
+print("\n\n")
+
+#-------------------------------------------------
+# Matplotlib
+print("Exercising Matplotlib...")
+
+import matplotlib
+matplotlib.use('Agg') # use Agg backend to fix issues when running in virtual environment
+import matplotlib.pyplot as plt
 plt.plot(x, special.jv(3, x), '-', sol.x, -sol.fun, 'o')
 # plt.show()
 
 print("\n\n")
-
 
 #-------------------------------------------------
 # scikit-learn
