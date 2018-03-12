@@ -4,7 +4,7 @@
 # MySQL
 print("Connecting to the database and exercising MySQL...")
 
-import MySQLdb as db
+import pymysql as db
 
 host = "localhost"
 user = "user"
@@ -12,7 +12,11 @@ password = ""
 dbname = "TESTDB"
 
 try:
-    conn = db.connect(host, user, password, dbname)
+    conn = db.connect(
+        host='localhost',
+        user='user',
+        password='',
+        db='db')
     c = conn.cursor()
     c.execute("SELECT VERSION()")
     data = c.fetchone()
