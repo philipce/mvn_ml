@@ -46,7 +46,6 @@ print("Exercising NumPy and SciPy")
 
 import numpy as np
 from scipy import special, optimize
-import matplotlib.pyplot as plt
 
 f = lambda x: -special.jv(3, x)
 sol = optimize.minimize(f, 1.0)
@@ -61,9 +60,11 @@ print("\n\n")
 print("Exercising Matplotlib...")
 
 import matplotlib
-matplotlib.use('Agg') # use Agg backend to fix issues when running in virtual environment
+matplotlib.use('Agg') # use Agg backend (*before* pyplot) to fix issues when running in virtual environment
 import matplotlib.pyplot as plt
-plt.plot(x, special.jv(3, x), '-', sol.x, -sol.fun, 'o')
+
+p = plt.plot(x, special.jv(3, x), '-', sol.x, -sol.fun, 'o')
+print(p)
 # plt.show()
 
 print("\n\n")
