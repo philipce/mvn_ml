@@ -8,11 +8,6 @@ print("Connecting to the database and exercising MySQL...")
 
 import pymysql as db
 
-host = "localhost"
-user = "user"
-password = ""
-dbname = "TESTDB"
-
 try:
     conn = db.connect(
         host='localhost',
