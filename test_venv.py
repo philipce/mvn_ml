@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+print("\nENVIRONMENT SETUP TEST\n")
+
 #-------------------------------------------------
 # MySQL
 print("Connecting to the database and exercising MySQL...")
