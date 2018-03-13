@@ -7,13 +7,17 @@ print("\nENVIRONMENT SETUP TEST\n")
 print("Connecting to the database and exercising MySQL...")
 
 import pymysql as db
+import configparser
 
 try:
+    config = configparser.ConfigParser()
+    config.read('./config.txt')
+
     conn = db.connect(
-        host='localhost',
-        user='user',
-        password='',
-        db='db')
+        host=config.get('database','host'),
+        user=config.get('database','user'),
+        password=config.get('database','password'),
+        db=config.get('database','db'),)
     c = conn.cursor()
     c.execute("SELECT VERSION()")
     data = c.fetchone()
