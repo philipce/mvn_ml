@@ -12,8 +12,8 @@
 #### Installing MySQL
 Before installing the Python MySQL connector, MySQL must be installed locally (otherwise I got `pip` errors):
 - On macOS: `brew install mysql`
-- Note: doing `brew unlink mysql-connector-c` didn't fix the `pip` errors--if you already did, `brew unlink mysql-connector-c` and just install `mysql` 
+- Note: `brew install mysql-connector-c` didn't fix the `pip` errors--if you already did, `brew unlink mysql-connector-c` and just install `mysql` 
 
-Then, in virtual environment, do the following: 
-- `pip install pymysql`
-- `pip install mysqlclient` (kept having different issues arise with this one; recommend pymysql)
+Then, in virtual environment, install a python mysql package: 
+- `pip install pymysql` (`import pymysql`) or `pip install mysqlclient` (`import MySQLdb`)
+- Note: kept having different issues arise with mysqlclient; recommend pymysql instead
