@@ -5,7 +5,7 @@
 - Create the virtual environment: `virtualenv venv`
 - Activate virtual environment: `source venv/bin/activate`
 - Install packages: `pip install -r requirements.txt`
-- Make sure environment is set up: `./venv_test.py`
+- Make sure environment is set up: `./test_venv.py`
 - Anything `pip` installs will be reflected in venv; `pip freeze > requirements.txt` to update
 - Deactivate it when finished: `deactivate`
 
@@ -16,4 +16,4 @@ Before installing the Python MySQL connector, MySQL must be installed locally (o
 
 Then, in virtual environment, do the following: 
 - `pip install pymysql`
-- `pip install mysqlclient`
+- `pip install mysqlclient` (kept having different issues arise with this one; recommend pymysql)
